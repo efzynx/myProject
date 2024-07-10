@@ -6,8 +6,8 @@
   "scripts": {
     "start": "webpack-dev-server",
     "build": "webpack --mode production && cp src/index.html dist/index.html",
-    "predeploy" : "npm run build && rm -rf docs/* && cp -r dist/* docs/*",
-    "deploy": "git add docs && git commit -m 'Deploy to GitHub Pages' && git push",
+    "predeploy" : "npm run build && mkdir -p docs && cp -r dist/* docs/",
+    "deploy": "git add docs && git commit -m 'Add support bootstrap' && git push",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
